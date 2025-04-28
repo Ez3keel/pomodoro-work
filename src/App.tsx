@@ -3,6 +3,7 @@ import { Heading } from "./components/heading";
 // Importando o css ex.: import "./App.css";
 import "./styles/theme.css";
 import "./styles/global.css";
+import { TimerIcon } from "lucide-react";
 
 //PascalCase
 //App
@@ -13,9 +14,12 @@ export function App() {
   console.log("Oi");
   return (
     <>
-      <Heading> Olá mundo 1! </Heading>
-      <Heading> Olá mundo 2! </Heading>
-      <Heading> Olá mundo 3! </Heading>
+      <Heading>
+        Olá mundo 1!
+        <button>
+          <TimerIcon />
+        </button>
+      </Heading>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad error
         praesentium, id minus incidunt eos enim neque, totam harum corrupti
