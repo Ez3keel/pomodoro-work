@@ -1,31 +1,40 @@
-//Importando o componente
-import { Heading } from "./components/heading";
 // Importando o css ex.: import "./App.css";
 import "./styles/theme.css";
 import "./styles/global.css";
-import { TimerIcon } from "lucide-react";
-
-//PascalCase
-//App
-//HeaderHeading
 
 //Se exportar direto na function quando for importar no main tem que colocar o mesmo nome no import import Ex.: { App } from "./App";
 export function App() {
   console.log("Oi");
   return (
     <>
-      <Heading>
-        Olá mundo 1!
-        <button>
-          <TimerIcon />
-        </button>
-      </Heading>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad error
-        praesentium, id minus incidunt eos enim neque, totam harum corrupti
-        accusantium asperiores voluptates quae soluta est? Sed distinctio
-        dignissimos facilis?
-      </p>
+      <div className="container-fluid">
+        <div className="container">
+          <div className="content">
+            <section>LOGO</section>
+          </div>
+        </div>
+      </div>
+      <div className="container-fluid">
+        <div className="container">
+          <div className="content">
+            <section>MENU</section>
+          </div>
+        </div>
+      </div>
+      <div className="container-fluid">
+        <div className="container">
+          <div className="content">
+            <section>FORM</section>
+          </div>
+        </div>
+      </div>
+      <div className="container-fluid">
+        <div className="container">
+          <div className="content">
+            <section>FOOTER</section>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
