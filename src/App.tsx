@@ -1,36 +1,27 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+//Importando o componente
+import { Heading } from "./components/heading";
+// Importando o css ex.: import "./App.css";
+import "./styles/theme.css";
+import "./styles/global.css";
 
-function App() {
-  const [count, setCount] = useState(0);
+//PascalCase
+//App
+//HeaderHeading
 
+//Se exportar direto na function quando for importar no main tem que colocar o mesmo nome no import import Ex.: { App } from "./App";
+export function App() {
+  console.log("Oi");
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <p>teste</p>
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+      <Heading />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad error
+        praesentium, id minus incidunt eos enim neque, totam harum corrupti
+        accusantium asperiores voluptates quae soluta est? Sed distinctio
+        dignissimos facilis?
       </p>
     </>
   );
 }
 
-export default App;
+// export { App };
