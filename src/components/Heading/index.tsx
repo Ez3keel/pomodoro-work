@@ -1,4 +1,4 @@
-import styles from "./heading.module.css";
+import styles from "./styles.module.css";
 
 type HeadingProps = {
   // Com ReactNode é o tipo que o children aceita, isso evita erros
