@@ -13,7 +13,9 @@ export function App() {
   console.log("Oi");
   return (
     <>
-      <Heading />
+      <Heading> Olá mundo 1! </Heading>
+      <Heading> Olá mundo 2! </Heading>
+      <Heading> Olá mundo 3! </Heading>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad error
         praesentium, id minus incidunt eos enim neque, totam harum corrupti
