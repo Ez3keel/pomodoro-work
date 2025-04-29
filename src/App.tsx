@@ -11,11 +11,26 @@ import { Cycles } from "./components/Cycles";
 import { DefaultButton } from "./components/DefaultButton";
 import { Footer } from "./components/Footer";
 import { PlayCircleIcon } from "lucide-react";
+import { Heading } from "./components/Heading";
 
 //Se exportar direto na function quando for importar no main tem que colocar o mesmo nome no import import Ex.: { App } from "./App";
 export function App() {
+  let numero = 0;
+
+  function handleClick() {
+    numero += 1;
+    const span = document.getElementById("numero");
+    span.innerText = numero.toString();
+    console.log(numero, Date.now());
+  }
+
   return (
     <>
+      <Heading>
+        Número: <span id="numero">{numero}</span>
+      </Heading>
+      <button onClick={handleClick}>Aumenta</button>
+
       <Container>
         <Logo />
       </Container>
@@ -32,7 +47,7 @@ export function App() {
         <form className="form" action="">
           <div className="formRow">
             <DefaultInput
-              labelText="Task"
+              labelText={numero.toString()}
               id="meuInput"
               type="text"
               title="TITULO"
