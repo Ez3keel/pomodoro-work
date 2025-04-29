@@ -1,4 +1,4 @@
-import "./styles.module.css";
+import styles from "./styles.module.css";
 
 // Com isso vai aparecer todos os tipos corretos do input no html
 type DefaultInputProps = {
@@ -18,7 +18,7 @@ export function DefaultInput({
 
       {/* Outra forma de validar é se existir a condição o && vai executar o código */}
       {labelText && <label htmlFor={id}>{labelText}</label>}
-      <input type={type} id={id} {...rest} />
+      <input className={styles.input} type={type} id={id} {...rest} />
     </>
   );
 }

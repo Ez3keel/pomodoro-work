@@ -7,6 +7,7 @@ import { Logo } from "./components/Logo";
 import { Menu } from "./components/Menu";
 import { CountDown } from "./components/CountDown";
 import { DefaultInput } from "./components/DefaultInput";
+import { Cycles } from "./components/Cycles";
 
 //Se exportar direto na function quando for importar no main tem que colocar o mesmo nome no import import Ex.: { App } from "./App";
 export function App() {
@@ -32,6 +33,7 @@ export function App() {
               id="meuInput"
               type="text"
               title="TITULO"
+              placeholder="Digite algo"
             />
           </div>
           <div className="formRow">
@@ -39,8 +41,7 @@ export function App() {
           </div>
 
           <div className="formRow">
-            <p>Ciclos</p>
-            <p>0 0 0 0 0 0 0</p>
+            <Cycles />
           </div>
 
           <div className="formRow">
