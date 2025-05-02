@@ -11,12 +11,20 @@ export function Menu() {
     event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
   ) {
     event.preventDefault(); //Não segue o link
+
     console.log("Clicado", Date.now());
+
+    setTheme((prevTheme) => {
+      const nextTheme = prevTheme === "dark" ? "light" : "dark";
+      return nextTheme;
+    });
+
+    document.documentElement.setAttribute("data-theme", theme);
   }
 
   return (
     <nav className={styles.menu}>
-      {/* <h1>{theme}</h1> */}
+      <h1>{theme}</h1>
       <a
         className={styles.menuLink}
         href="#"
