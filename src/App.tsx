@@ -11,24 +11,11 @@ import { Cycles } from "./components/Cycles";
 import { DefaultButton } from "./components/DefaultButton";
 import { Footer } from "./components/Footer";
 import { PlayCircleIcon } from "lucide-react";
-import { Heading } from "./components/Heading";
-import { useState } from "react";
 
 //Se exportar direto na function quando for importar no main tem que colocar o mesmo nome no import import Ex.: { App } from "./App";
 export function App() {
-  const [numero, setNumero] = useState(0);
-
-  function handleClick() {
-    setNumero((prevState) => prevState + 1);
-  }
-
   return (
     <>
-      <Heading>
-        Número: <span id="numero">{numero}</span>
-      </Heading>
-      <button onClick={handleClick}>Aumenta</button>
-
       <Container>
         <Logo />
       </Container>
@@ -45,7 +32,7 @@ export function App() {
         <form className="form" action="">
           <div className="formRow">
             <DefaultInput
-              labelText={numero.toString()}
+              labelText="task"
               id="meuInput"
               type="text"
               title="TITULO"
