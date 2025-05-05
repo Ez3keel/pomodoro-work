@@ -1,19 +1,41 @@
 import { Container } from "../../components/Container";
 import { CountDown } from "../../components/CountDown";
 import { MainForm } from "../../components/MainForm";
+import { TaskStateModel } from "../../models/TaskStateModel";
 import { MainTemplate } from "../../templates/MainTemplate";
 
-export function Home() {
+type HomeProps = {
+  state: TaskStateModel;
+  setState: React.Dispatch<React.SetStateAction<TaskStateModel>>;
+};
+
+export function Home(props: HomeProps) {
+  const { state, setState } = props;
+  console.log(props);
+
+  function handleClick() {
+    setState((prevState) => {
+      // Sempre que for mudar um objeto mutável sempre criar um novo obj ou array copiar o estado anterior e dai vc pode alterar.
+      return {
+        ...prevState,
+        currentCycle: 5,
+      };
+    });
+  }
+
   return (
     <MainTemplate>
       <Container>
-        <CountDown/>
+        <button onClick={handleClick}>Clicar</button>
       </Container>
 
       <Container>
-        <MainForm/>
+        <CountDown />
       </Container>
 
+      <Container>
+        <MainForm />
+      </Container>
     </MainTemplate>
   );
 }
